@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: rgba(0, 0, 0, 0.5); /* Add some transparency to the background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* This will blur the background */
+    -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with Safari */
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.education {
+    padding: 5rem 0;
+}
+
+.education h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 4rem; /* Increased margin for better spacing */
+}
+
+.education h1 span {
+    color: #b74b4b;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; /* Added more gap between timeline items */
+    padding: 0 3rem; /* Added padding for more breathing room */
+}
+
+.timeline-item {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.timeline-icon {
+    font-size: 4rem;
+    color: #b74b4b;
+}
+
+.timeline-content h3 {
+    font-size: 3rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    font-size: 1.8rem;
+    color: white;
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+@media (max-width: 1000px) {
+    .timeline {
+        gap: 2rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .timeline-icon {
+        font-size: 3rem;
+    }
+
+    .timeline-content p {
+        font-size: 1.6rem;
+    }
+}
